@@ -37,18 +37,18 @@
         };
 		
         raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |ESC| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-// |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//              |      |       |       |      |      |  |      |      |      |       |      |
+// -----------------------------------------------------						-------------------------------------------------------
+// | ESC | NONE  | PG UP| NONE  |  + 	| -	   |         						       |      |      |       |      |       |       |
+// | TAB | NONE  | UP   | NONE  |  *    | /    |         						       | PGUP |      |   ^   |      |       |       |
+// | HOME| LEFT  | DOWN | RIGHT | END   | =    |         						       | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+// |SHIFT| NONE  | PG DN| NONE  | NONE  | / ?  |      | 						|      |      |      |       |      |       |       |
+//               | CTRL |  GUI  | ALT   |SPACE |      | 						|      |      |      |       |      |
             bindings = <
-&kp ESC &none &kp PAGE_UP &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans   &trans    &trans  &trans
-&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
-                        &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
+&kp ESC 	  &none    &kp PAGE_UP   &none 		&kp K_PLUS 		&kp KP_MINUS    			&trans    &trans    &trans   &trans    &trans  &trans
+&kp TAB       &none    &kp UP        &none  	&kp KP_MULTIPLY &kp KP_DIVIDE   			&kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
+&kp HOME      &kp LEFT &kp DOWN      &kp RIGHT  &kp KP_EQUAL    &kp KP_EQUAL    			&kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
+&kp LSHIFT    &none    &kp PAGE_DOWN &none   	&none  			&kp SLASH   	&to 1   	&trans  &trans    &trans    &trans   &trans    &trans  &trans
+					   &kp LCTRL     &LGUI      &kp LALT        &kp SPACE	    &kp RET		&trans  &trans    &trans    &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
