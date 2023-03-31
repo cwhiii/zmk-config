@@ -44,11 +44,11 @@
 // |SHIFT| NONE  | PG DN| NONE  | NONE  | / ?  |      | 						|      |      |      |       |      |       |       |
 //               | CTRL |  GUI  | ALT   |SPACE |      | 						|      |      |      |       |      |
             bindings = <
-&kp ESC 	  &none    &kp PAGE_UP   &none 		&kp K_PLUS 		&kp KP_MINUS    &trans    &trans    &trans   &trans    &trans  &trans
-&kp TAB       &none    &kp UP        &none  	&kp KP_MULTIPLY &kp KP_DIVIDE   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&kp HOME      &kp LEFT &kp DOWN      &kp RIGHT  &kp KP_EQUAL    &kp KP_EQUAL    &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&kp LSHIFT    &none    &kp PAGE_DOWN &none   	&none  			&kp SLASH   	&trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
-					   &kp LCTRL     &LGUI      &kp LALT        &kp SPACE	    &trans   &trans  &trans    &trans    &trans   &trans
+&kp ESC 	  &none    &kp PAGE_UP   &none 		&kp K_PLUS 		&kp KP_MINUS    			&trans    &trans    &trans   &trans    &trans  &trans
+&kp TAB       &none    &kp UP        &none  	&kp KP_MULTIPLY &kp KP_DIVIDE   			&kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
+&kp HOME      &kp LEFT &kp DOWN      &kp RIGHT  &kp KP_EQUAL    &kp KP_EQUAL    			&kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
+&kp LSHIFT    &none    &kp PAGE_DOWN &none   	&none  			&kp SLASH   	&to 1   	&trans  &trans    &trans    &trans   &trans    &trans  &trans
+					   &kp LCTRL     &LGUI      &kp LALT        &kp SPACE	    &kp RET		&trans  &trans    &trans    &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
