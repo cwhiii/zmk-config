@@ -48,7 +48,7 @@
 &kp TAB       &trans    &kp UP        &trans  	&kp KP_MULTIPLY &kp KP_DIVIDE   			&kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &kp HOME      &kp LEFT  &kp DOWN      &kp RIGHT &kp KP_EQUAL    &kp KP_EQUAL    			&kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
 &kp LSHIFT    &trans    &kp PAGE_DOWN &trans   	&trans  		&kp SLASH   	&to 1   	&trans  &trans    &trans    &trans   &trans    &trans  &trans
-					    &kp LCTRL      &LGUI    &kp LALT        &kp SPACE	    &kp RET		&trans  &trans    &trans    &trans   &trans
+                    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
