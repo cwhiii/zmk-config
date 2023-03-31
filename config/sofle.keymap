@@ -2,6 +2,7 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ * FINAL CONFIG: sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
  */
 
 #include <behaviors.dtsi>
@@ -27,7 +28,6 @@
 							 &kp LCTRL &kp LGUI &kp LALT  &kp SPACE &kp RET    &kp SPACE &mo 2  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            # FINAL CONFIG: sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 		
