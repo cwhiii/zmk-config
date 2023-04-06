@@ -2,14 +2,13 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
- * FINAL CONFIG: sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+ * For FINAL CONFIG: sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+ * For Bluetooth: #include <dt-bindings/zmk/outputs.h>
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-# For Bluetooth:
 #include <dt-bindings/zmk/outputs.h>
 
 #define NUMBERS 0
