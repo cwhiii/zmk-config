@@ -19,5 +19,4 @@ include:
     shield: sofle_right  nice_view_adapter nice_view
 
 
-# C3 Config change: 
-# changed the lines "shield: sofle_right/left" to include " nice_view_adapter nice_view"
+#changed the lines "shield: sofle_right/left" to include " nice_view_adapter nice_view"
