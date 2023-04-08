@@ -24,54 +24,54 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  ESC `|  1  |  2  |  3   |  4   |  5   |               						  				|  6  	 |  7    |  8   |  9   |   0   | backspace |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                 										|  Y  	 |  U    |  I   |  O   |   P   |     "     |
-// |  C&P  |  A  |  S  |  D   |  F   |  G   |             	    						   			|  H  	 |  J    |  K   |  L   |   ;   |     -     |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | FUNCTIONS | 							 | PRINTSCREEN  |  N  	 |  M    |  ,   |  .   |   ?   |   SHIFT   |
-//               |CTRL | GUI  | ALT	 | SPACE| NUMBERS   | 							 | Enter | Space| CTRL	 | ALT   | GUI  |
+// .----------------------------------------.												.--------------------------------------------------.
+// |  ESC `|  1  |  2  |  3   |  4   |  5   |												|  6  	 |  7    |  8   |  9   |   0   | Backspace |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |												|  Y  	 |  U    |  I   |  O   |   P   |     "     |
+// |  C&P  |  A  |  S  |  D   |  F   |  G   |-------.								.-------|  H  	 |  J    |  K   |  L   |   ;   |     -     |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   | Mute  |								| PSCRN |  N  	 |  M    |  ,   |  .   |   ?   |   SHIFT   |
+// .-------------|CTRL | GUI  | ALT	 | SPACE| Enter |								| Enter | Space | ###	 | KEYS | FNs  |-------------------.
             bindings = <
-&mt ESC GRAVE 		  &kp N1 &kp N2   &kp N3   &kp N4     &kp N5                  					  &kp N6       &kp N7        &kp N8        &kp N9       &kp N0         &kp BSPC
-&kp TAB   			  &kp Q  &kp W    &kp E    &kp R      &kp T                     				  &kp Y        &kp U         &kp I         &kp O        &kp P    	   &kp SINGLE_QUOTE
-&kp CAPS		      &kp A  &kp S    &kp D    &kp F      &kp G                       				  &kp H        &kp J         &kp K         &kp L        &kp SEMICOLON  &kp MINUS
-&kp LSHFT             &kp Z  &kp X    &kp C    &kp V      &kp B     &kp K_MUTE        &kp PSCRN 	  &kp N        &kp M         &kp KP_COMMA  &kp KP_DOT   &kp SLASH      &kp RSHFT
-							 &kp LCTRL &kp LGUI &kp LALT  &kp SPACE &kp ENTER 	      &kp SPACE 	  &to NUMBERS  &to TYPING    &to FUNCTIONS
+&mt ESC GRAVE 		  &kp N1 &kp N2		&kp N3   &kp N4     &kp N5                  					&kp N6		&kp N7			&kp N8        &kp N9       &kp N0         &kp BSPC
+&kp TAB   			  &kp Q  &kp W		&kp E    &kp R      &kp T                     					&kp Y		&kp U			&kp I         &kp O        &kp P    	   &kp SINGLE_QUOTE
+&kp CAPS		      &kp A  &kp S		&kp D    &kp F      &kp G                       				&kp H		&kp J			&kp K         &kp L        &kp SEMICOLON  &kp MINUS
+&kp LSHFT             &kp Z  &kp X		&kp C    &kp V      &kp B     &kp K_MUTE			&kp PSCRN	&kp N		&kp M			&kp KP_COMMA  &kp KP_DOT   &kp SLASH      &kp RSHFT
+							 &kp LCTRL	&kp LGUI &kp LALT  &kp SPACE &kp ENTER			&kp ENTER	&kp SPACE	&to NUMBERS		&to TYPING    &to FUNCTIONS
             >;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         }; 
 		
         raise_layer {
-// -----------------------------------------------------						-------------------------------------------------------
-// | ESC |       | PG UP|       |  + 	| -	   |         						       |      |      |       |      |       |       |
-// | TAB |       |   ^  |       |  *    | /    |         						       | PGUP |      |   ^   |      |       |       |
-// | HOME| <--   |   v  |  -->  | END   | =    |         						       | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |SHIFT|       | PG DN|       |       | / ?  | &to 1 | 						|      |      |      |       |      |       |       |
-//               | CTRL |  GUI  | ALT   |SPACE | &to 0 | 						|      |      |      |       |      |
+// .-------------------------------------------.															.-----------------------------------------------.
+// | ESC |       | PG UP|       |  + 	| -	   |         											        |      |  7   |  8   |  9   |   0   | Backspace |
+// | TAB |       |   ^  |       |  *    | /    |         											        | 	   |  4   |  5   |  6   |       |           |
+// | HOME| <--   |   v  |  -->  | END   | =    |-------. 											.-------|  	   |  1   |  3   |  3   |       |           |
+// |SHIFT|       | PG DN|       |       | / ?  | Mute  | 											| PSCRN |      |  0   |      |  .   |   \   | RSHIFT    |
+// .-------------| CTRL |  GUI  | ALT   |SPACE | Enter | 											| Enter | Space| ###  | KEYS | FNs  |-------------------.
             bindings = <
-&kp ESC 	  &none    &kp PAGE_UP   &none     &kp KP_PLUS 	    &kp KP_MINUS    							&none     	&kp N7		&kp N8	&kp N9			&kp N0  			&kp BSPC
-&kp TAB       &none    &kp UP        &none     &kp KP_MULTIPLY  &kp KP_DIVIDE   							&none 		&kp N4		&kp N5	&kp N6			&kp LEFT_BRACKET	&kp RIGHT_BRACKET
-&kp HOME      &kp LEFT &kp DOWN      &kp RIGHT &kp END          &kp KP_EQUAL    							&none 		&kp N1		&kp N2	&kp N3			&kp LEFT_BRACE 	&kp RIGHT_BRACE
-&kp LSHIFT    &none    &kp PAGE_DOWN &none     &none  		    &kp SLASH   	&none   		 &kp PSCRN	&none    	&kp N0		&none		&kp KP_DOT	&kp BACKSLASH
-					   &kp LCTRL 	 &kp LGUI  &kp LALT  		&kp SPACE 		&kp ENTER 	     &kp SPACE 	&to NUMBERS &to TYPING	&to FUNCTIONS
+&kp ESC 	  &none    &kp PAGE_UP		&none		&kp KP_PLUS		&kp KP_MINUS    							&none     	&kp N7		&kp N8		&kp N9			&kp N0  			&kp BSPC
+&kp TAB       &none    &kp UP			&none		&kp KP_MULTIPLY &kp KP_DIVIDE   							&none 		&kp N4		&kp N5		&kp N6			&kp LEFT_BRACKET	&kp RIGHT_BRACKET
+&kp HOME      &kp LEFT &kp DOWN			&kp RIGHT	&kp END			&kp KP_EQUAL								&none 		&kp N1		&kp N2		&kp N3			&kp LEFT_BRACE 		&kp RIGHT_BRACE
+&kp LSHIFT    &none    &kp PAGE_DOWN	&none		&none			&kp SLASH	&kp K_MUTE			&kp PSCRN	&none    	&kp N0		&none		&kp KP_DOT		&kp BACKSLASH 		&kp RSHFT
+					   &kp LCTRL 		&kp LGUI	&kp LALT		&kp SPACE	&kp ENTER			&kp ENTER	&kp SPACE	&to NUMBERS	&to TYPING	&to FUNCTIONS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
-// ------------------------------------------------------------------------------------------------------------
-// | ESC   | F1  | F2  | F3   | F4   |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// | TAB   | F11 | F12 | F13  | F14  |  F15 |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
-// |       | F21 | F22 | F23  | F24  |      |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-// | SHIFT |     |     |      |      |      |     |     |       |  [   |  ]    |  ;    |  :   |   \   |       |
-//               |     |      |      |      |     |     |       |      |       |       |      |
+// .----------------------------------------.													.---------------------------------------------------.
+// | ESC   | F1  | F2  | F3   | F4   |  F5  |													|  F6   |  F7   |  F8   |  F9   |  F10  | Backspace |
+// | TAB   | F11 | F12 | F13  | F14  |  F15 |													|  F16  |  F17  |  F18  |  F19  |  F20  |			|
+// |       | F21 | F22 | F23  | F24  |      |-------.									.-------|      	|       |  *    |  (    |   )   |			|
+// | SHIFT |     |     |      |      |      | Mute  |									| PSCRN |       |       |  ;    |  :    |   \   |			|
+// .-------------|CTRL | GUI  | ALT	 | SPACE| Enter |									| Enter | Space | ###	 | KEYS |  FNs  |-------------------.
             bindings = <
-&kp ESC     &kp F1    &kp F2    &kp F3     &kp F4   &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
-&kp TAB     &kp F11   &kp F12   &kp F13    &kp F14  &kp F15                   &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
-&none		&kp F21   &kp F22   &kp F23    &kp F24  &none                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp PIPE
-&kp LSHIFT  &none     &none     &none      &none    &none      &none   &trans &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans
-                      &kp LCTRL &kp LGUI &kp LALT  &kp SPACE &kp ENTER 	      &kp SPACE &to NUMBERS  &to TYPING    &to FUNCTIONS
+&kp ESC     &kp F1    &kp F2    &kp F3		&kp F4		&kp F5										&kp F6		&kp F7   	&kp F8		&kp F9		&kp F10		&kp BSPC
+&kp TAB     &kp F11   &kp F12   &kp F13		&kp F14		&kp F15										&kp F16		&kp F17   	&kp F18		&kp F19		&kp F20		&none
+&none		&kp F21   &kp F22   &kp F23		&kp F24		&none										&none		&none	 	&none		&none		&none		&none
+&kp LSHIFT  &none     &none     &none		&none		&none		&kp K_MUTE			&kp PSCRN	&none		&none 		&none		&kp COLON	&kp BSLH	&kp RSHFT
+                      &kp LCTRL	&kp LGUI 	&kp LALT	&kp SPACE	&kp ENTER			&kp ENTER	&kp SPACE	&to NUMBERS	&to TYPING	&to FUNCTIONS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
