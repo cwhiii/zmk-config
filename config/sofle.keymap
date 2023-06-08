@@ -79,4 +79,4 @@
 
 
 // Right hand side SHOULD be:  &kp ENTER	&kp SPACE	&tog NUMBERS	&tog TYPING	&tog FUNCTIONS
-&mo NUMBERS &mo FUNCTIONS	&kp SPACE	&tog TYPING		&tog FUNCTIONS
+// &mo NUMBERS &mo FUNCTIONS	&kp SPACE	&tog TYPING		&tog FUNCTIONS
